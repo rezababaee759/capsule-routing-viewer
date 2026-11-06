@@ -1,0 +1,230 @@
+{
+ "provenance": {
+  "timestamp": "2026-11-05T14:52:53",
+  "argv": [
+   "experiments/run_cost.py"
+  ],
+  "code_fingerprint": "0dac31e2ce8b2cc9a8c866fd8d594082",
+  "git_commit": "a0e788133ebb4ce6bb923abfaf9b9ca41a1e8b15",
+  "versions": {
+   "python": "3.10.0",
+   "torch": "2.0.1+cu118",
+   "numpy": "1.26.4",
+   "scipy": "1.11.4",
+   "cuda": "11.8",
+   "cudnn": 8700,
+   "matplotlib": "3.10.7",
+   "plotly": "6.2.0",
+   "streamlit": "1.29.0",
+   "torchvision": "0.15.2+cu118"
+  },
+  "device": "NVIDIA GeForce RTX 4090",
+  "protocol": "experiments/PROTOCOL.md (incl. amendments); constants in explorer/protocol.py",
+  "cpu_threads": 10,
+  "cpu": "x86_64",
+  "reps": {
+   "gpu": [
+    20,
+    200,
+    50
+   ],
+   "cpu": [
+    3,
+    20,
+    3
+   ]
+  },
+  "seed": 2026,
+  "checkpoints": {
+   "mnist": "d45b17ae0a0354f5a0d774a176b9e846",
+   "fashionmnist": "bf86cdd7c4e6f7e3953ffeb6c7946199",
+   "cifar10": "3e00cbc4eb0ebc1aa9139ee26f0a4306"
+  },
+  "note": "one image per dataset (main_set[0]); app timings are a single run"
+ },
+ "results": {
+  "mnist": {
+   "cuda": {
+    "N": 1152,
+    "forward": {
+     "median_ms": 0.7712850347161293,
+     "iqr_ms": [
+      0.7678726688027382,
+      0.8405763655900955
+     ],
+     "reps": 200
+    },
+    "gradient_attributions": {
+     "median_ms": 11.747816577553749,
+     "iqr_ms": [
+      10.145793668925762,
+      12.977347243577242
+     ],
+     "reps": 200
+    },
+    "exact_ablation": {
+     "median_ms": 35.21732985973358,
+     "iqr_ms": [
+      35.091024823486805,
+      35.32587783411145
+     ],
+     "reps": 50
+    },
+    "app": {
+     "analysis_ms": 57.194674387574196,
+     "page_build_ms": 239.03985135257244,
+     "page_mb": 5.750518
+    }
+   },
+   "cpu": {
+    "N": 1152,
+    "forward": {
+     "median_ms": 3.5394951701164246,
+     "iqr_ms": [
+      3.428332507610321,
+      4.087210167199373
+     ],
+     "reps": 20
+    },
+    "gradient_attributions": {
+     "median_ms": 6.67322613298893,
+     "iqr_ms": [
+      6.656601093709469,
+      6.861950736492872
+     ],
+     "reps": 20
+    },
+    "exact_ablation": {
+     "median_ms": 2038.0591377615929,
+     "iqr_ms": [
+      2037.4486772343516,
+      2050.4284109920263
+     ],
+     "reps": 3
+    }
+   }
+  },
+  "fashionmnist": {
+   "cuda": {
+    "N": 1152,
+    "forward": {
+     "median_ms": 0.8414154872298241,
+     "iqr_ms": [
+      0.772631261497736,
+      0.849828589707613
+     ],
+     "reps": 200
+    },
+    "gradient_attributions": {
+     "median_ms": 9.482137858867645,
+     "iqr_ms": [
+      6.250852718949318,
+      12.512006796896458
+     ],
+     "reps": 200
+    },
+    "exact_ablation": {
+     "median_ms": 35.24174913764,
+     "iqr_ms": [
+      35.1200383156538,
+      35.379284992814064
+     ],
+     "reps": 50
+    },
+    "app": {
+     "analysis_ms": 46.3342759758234,
+     "page_build_ms": 92.74695441126823,
+     "page_mb": 5.748445
+    }
+   },
+   "cpu": {
+    "N": 1152,
+    "forward": {
+     "median_ms": 3.4525208175182343,
+     "iqr_ms": [
+      3.316099289804697,
+      4.062212537974119
+     ],
+     "reps": 20
+    },
+    "gradient_attributions": {
+     "median_ms": 6.6106365993618965,
+     "iqr_ms": [
+      6.583870854228735,
+      6.822011899203062
+     ],
+     "reps": 20
+    },
+    "exact_ablation": {
+     "median_ms": 2064.821869134903,
+     "iqr_ms": [
+      2055.101695470512,
+      2079.889149405062
+     ],
+     "reps": 3
+    }
+   }
+  },
+  "cifar10": {
+   "cuda": {
+    "N": 4096,
+    "forward": {
+     "median_ms": 0.8352277800440788,
+     "iqr_ms": [
+      0.7766224443912506,
+      0.8548237383365631
+     ],
+     "reps": 200
+    },
+    "gradient_attributions": {
+     "median_ms": 12.013996951282024,
+     "iqr_ms": [
+      10.681835003197193,
+      12.703123036772013
+     ],
+     "reps": 200
+    },
+    "exact_ablation": {
+     "median_ms": 461.6617728024721,
+     "iqr_ms": [
+      461.54886530712247,
+      461.9825864210725
+     ],
+     "reps": 50
+    },
+    "app": {
+     "analysis_ms": 475.4893407225609,
+     "page_build_ms": 178.06372232735157,
+     "page_mb": 8.232636
+    }
+   },
+   "cpu": {
+    "N": 4096,
+    "forward": {
+     "median_ms": 12.854071334004402,
+     "iqr_ms": [
+      12.660894077271223,
+      13.0742103792727
+     ],
+     "reps": 20
+    },
+    "gradient_attributions": {
+     "median_ms": 20.39820048958063,
+     "iqr_ms": [
+      20.23276360705495,
+      20.856883376836777
+     ],
+     "reps": 20
+    },
+    "exact_ablation": {
+     "median_ms": 25830.612873658538,
+     "iqr_ms": [
+      25803.884729743004,
+      25942.72691383958
+     ],
+     "reps": 3
+    }
+   }
+  }
+ }
+}

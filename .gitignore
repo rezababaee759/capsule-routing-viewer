@@ -1,0 +1,23 @@
+# datasets and model weights are not tracked
+data/
+models/
+*.pt
+# python / latex build artefacts
+__pycache__/
+*.pyc
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.toc
+paper/main.pdf
+# manuscript sources (under review; not distributed with the code)
+paper/main.tex
+paper/references.bib
+paper/claims.yaml
+paper/citations.yaml
+paper/Definitions/
+paper/generated/
+# temporary pages that scripts/capture_app.py writes and loads for the screenshots
+paper/figures/raw/page_*.html
